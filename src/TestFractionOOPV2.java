@@ -57,6 +57,7 @@ class FractionOOPV2 {
     return newFrac;
   }
 
+  @Override
   public String toString() {
     return num+"/"+denom;
   }
@@ -73,6 +74,7 @@ public class TestFractionOOPV2 {
       FractionOOPV1 f2 = new FractionOOPV1(sc.nextInt(),sc.nextInt());
       f1.add(f2);
       System.out.println(f1);
+      sc.close();
     }
   }
 }

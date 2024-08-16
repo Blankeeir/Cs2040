@@ -15,20 +15,23 @@ public class FractionV4 {
 
 	public static void main(String[] args) {
     int a,b,c,d,newNum,newDenom;
-    Scanner sc = new Scanner(System.in);
-
-    System.out.print("Enter 2 Fractions to be added: ");
-    a = sc.nextInt();
-    b = sc.nextInt();
-    c = sc.nextInt();
-    d = sc.nextInt();
-
-    newDenom = b*d;
-    newNum = a*d+c*b;
-
-    int divisor = gcd(newNum,newDenom);
-    newNum /= divisor;
-    newDenom /= divisor;   
-    System.out.println("New Fraction = "+newNum+"/"+newDenom);
+      try (Scanner sc = new Scanner(System.in)) {
+          System.out.print("Enter 2 Fractions to be added: ");
+          a = sc.nextInt();
+          b = sc.nextInt();
+          c = sc.nextInt();
+          d = sc.nextInt();
+          
+          newDenom = b*d;
+          newNum = a*d+c*b;
+          
+          int divisor = gcd(newNum,newDenom);
+          newNum /= divisor;
+          newDenom /= divisor;
+          System.out.println("New Fraction = "+newNum+"/"+newDenom);
+          sc.close();
+      } catch (Exception e) {
+          System.out.println("Invalid Input" + e);
+      }
 	}
 }

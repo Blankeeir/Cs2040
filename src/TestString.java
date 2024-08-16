@@ -4,7 +4,7 @@ public class TestString {
 
 	public static void main(String[] args) {
 
-		String text = new String("I'm studying CS2040.");
+		String text = "I'm studying CS2040.";
 		// or String text = "I'm studying CS2040.";
 
 		System.out.println("text: " + text);
