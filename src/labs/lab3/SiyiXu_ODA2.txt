@@ -1,0 +1,33 @@
+// Initialize an empty list to store signs
+Create an empty list called signs
+
+// Read the number of signs
+scanner read integer n
+
+// Loop to read each sign and extract middle letters
+For i from 1 to n do:
+    Read string signText
+    middleLetters = getMiddleLetters(signText)
+    Create a Sign object with text = signText and middleLetters = middleLetters
+    Add the Sign object to the signs list
+
+// Sort the signs based on middle letters using a stable sort
+Sort the signs list based on the middleLetters attribute of each Sign object
+
+// Print the sorted signs
+For each Sign in signs do:
+    Print Sign.text
+
+// Function to extract middle letters from a sign
+Function getMiddleLetters(string s):
+    len = length of s
+    If len is even then:
+        // Extract two middle letters
+        startIndex = (len / 2) - 1
+        endIndex = (len / 2) + 1
+        middleLetters = substring of s from startIndex to endIndex (excluding endIndex)
+    Else:
+        // Extract one middle letter
+        index = len / 2
+        middleLetters = character at index in s
+    Return middleLetters

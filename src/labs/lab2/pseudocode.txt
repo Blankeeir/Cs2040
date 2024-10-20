@@ -1,0 +1,47 @@
+# Lab 2
+Siyi Xu A02888048R
+
+## Pseudocode
+
+public static HashMap<Character, String> BuildUtilityMap() {
+    put every character including space as key, pub the corresponding keyPress string as value ('a', "2");('b', "22");('c', "222");('d', "3");('e', "33");('f', "333");('g', "4");('h', "44");('i', "444");('j', "5");('k', "55");('l', "555");('m', "6");('n', "66");('o', "666");('p', "7");('q', "77");('r', "777");('s', "7777");('t', "8");('u', "88");('v', "888");('w', "9");('x', "99");('y', "999");('z', "9999");(' ', "0");
+
+}
+
+public static void main(String[] args) {
+    create new scanner sc;
+    get first int as numOfLines;
+
+
+    utilityMap = BuildUtilityMap();
+
+    for (i = 1; i <= numOfLines; i++) {
+        // for each line
+        String message as nextline input
+        String result = translate(message, utilityMap);
+        System.out.println("Case #" + ":" + result);
+            
+    }
+
+    close scanner;
+
+}
+
+public String translate(String msg, HashMap utilityMap) {
+    prevChar = "_" //initial previous token none
+    String value = "";
+    String res = new string builder // initializing value and result
+
+
+    for each character in msg {
+        value = get the value of character(key) in utilitMap 
+        if (value's first character equals prevChar's last character && result not empty) {
+            result.append(" ")// insert a blank space
+        }
+        result.append(value)
+        assign the last character of value to prevChar
+    }
+
+    return res;   
+        
+}

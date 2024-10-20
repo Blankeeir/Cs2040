@@ -1,0 +1,52 @@
+package labs.lab7;
+import java.util.Scanner;
+import java.io.*;
+
+public class weakvertices {
+    public static void main(String[] args) {
+        adjMatrix <- create a 2D array for adjacency matrix;
+        while (next integer input != -1) {
+             n <- input integer;
+             for (i = 0; i<n; i++) {
+                 for (j = 0; j<n; j++)
+                      adjMatrix[i][j] = (input value at row i, column j is 1)
+             }
+              
+        }
+
+	weak[] <- create new array for weak indices;
+	// reading the matrix and start algo
+        for (int i = 0; i< n; i++) {
+                isWeak = true;
+
+	    	neighbors[] <- empty array of neighbors 
+		for (int neighbor = 0; neighbor < n; n++):
+			if adjMatrix[i][neighbor]:
+				// add to neighbor list
+                                neighbors.add(neighbor)
+			endif
+		endfor
+
+                //now check each pair of neighbors whether they all have edge connected to vertex i
+               for (int k = 0; k < neighbors.size(); k++):
+                    for (int j = 0; j< neighbors.size(); j++):
+                         if adjMatrix[i][neighbors.get(k)] and adjMatrix[i][neighbors.get(j)]
+                               isWeak = false;
+                          endif
+                    endfor
+               endfor
+               
+                if isWeak:
+                     add i to weakindices array
+
+	endfor
+        
+         weakindices.sort();
+         for i in weakindices:
+              System.out.println(i); // remember to interval with a white space
+	
+
+        
+    }
+
+}
